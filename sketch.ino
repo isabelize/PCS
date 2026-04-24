@@ -1,14 +1,27 @@
+int red = 2;
+int yellow = 3;
+int green = 4;
+
+
 void setup() {
-  pinMode(LED_BUILTIN, OUTPUT);
-  pinMode(8, OUTPUT);
+  pinMode(red, OUTPUT);
+  pinMode(yellow, OUTPUT);
+  pinMode(green, OUTPUT);
 }
 
-// the loop function runs over and over again forever
 void loop() {
-  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
-  digitalWrite(8, LOW);
-  delay(1000);                       // wait for a second
-  digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
-  digitalWrite(8, HIGH);
-  delay(1000);                       // wait for a second
+   digitalWrite(red, HIGH);
+   digitalWrite(yellow, LOW);
+   digitalWrite(green, LOW);
+   delay(5000);
+
+   digitalWrite(red, LOW);
+   digitalWrite(yellow, HIGH);
+   digitalWrite(green, LOW);
+   delay(2000);
+
+   digitalWrite(red, LOW);
+   digitalWrite(yellow, LOW);
+   digitalWrite(green, HIGH);
+   delay(5000);
 }
